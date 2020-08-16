@@ -1,5 +1,8 @@
 # space-x
-Front-end application which would help users list and browse all launches by SpaceX program.
+Front-end application which would help users list and browse all launches by SpaceX program. 
+
+For running version of app click the link
+    - https://rocky-falls-63842.herokuapp.com
 
 
 ### Prerequisit
