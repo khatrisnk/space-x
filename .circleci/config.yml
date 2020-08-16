@@ -1,29 +1,7 @@
 version: 2.1
-jobs:
-  build:
-    docker: 
-      - image: circleci/node:12.3.1 # the primary container, where your job's commands are run
-    steps:
-      - checkout # check out the code in the project directory
-      - run: echo "Installing the Node Packages"
-      - run: npm install
-      - run: echo "Checking code quality against eslint"
-      - run: npm run lint
-      - run: echo "build server"
-      - run: npm run build:prod-server
-      - run: echo "build client"
-      - run: npm run build:prod-client
-  test:
-    docker: 
-      - image: circleci/node:12.3.1 # the primary container, where your job's commands are run
-    steps:
-      - checkout
-      - run: echo "Tesing the Application"
-      - run: npm install
-      - run: npm run test
+orbs:
+  node: circleci/node@3.0.0
 workflows:
-  version: 2.1
-  test_lint_and_build:
+  node-tests:
     jobs:
-      - test
-      - build
+      - node/test
