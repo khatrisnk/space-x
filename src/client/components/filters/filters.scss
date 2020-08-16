@@ -1,0 +1,59 @@
+@import '../../style.scss';
+
+.spx-filters {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    @media screen and (min-width: $above-mobile) {
+        width: 50%;
+    }
+
+    @media screen and (min-width: $above-tablet) {
+        width: 25%;
+    }
+
+    &__type {
+        width: 200px;
+        border-bottom: 1px solid #f2f2f2;
+        text-align: center;
+        margin: 0 auto;
+        
+        p {
+            margin: 0;
+            padding: 5px 0;
+        }
+    }
+    &__filter {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+
+        &__btns {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            max-width: 350px;
+            align-items: center;
+            button {
+                width: 50px;
+                margin-bottom: 10px;
+                background-color: #99e699;
+                border: none;
+                padding: 4px 6px;
+                border-radius: 3px;
+                cursor: pointer;
+
+                &:hover, &:focus {
+                    background-color: #1f7a1f;
+                }
+
+                &:active {
+                    background-color: #1f7a1f;
+                }
+            }
+        }
+    }
+}
