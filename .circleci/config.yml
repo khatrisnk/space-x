@@ -7,8 +7,6 @@ jobs:
       - checkout # check out the code in the project directory
       - run: echo "Installing the Node Packages"
       - run: npm install
-      - run: echo "Checking code quality against eslint"
-      - run: npm run lint
       - run: echo "build server"
       - run: npm run build:prod-server
       - run: echo "build client"
